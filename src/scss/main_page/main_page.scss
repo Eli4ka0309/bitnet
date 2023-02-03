@@ -4,14 +4,15 @@
   top: 0;
   left: 0;
   right: 0;
-  background: $white;
+  background: $baseWhite;
+  z-index: 1000;
 
 
   :after {
     content: "";
     width: 100%;
     height: 1px;
-    background: $greyLine;
+    background: $greyLineHeader;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -38,7 +39,8 @@
       margin-left: 72px;
       font-size: 17px;
       font-weight: 400;
-      &:first-child{
+
+      &:first-child {
         margin-left: 0;
       }
 
@@ -50,10 +52,11 @@
 
 .header_link {
   &:hover {
-    color: $darkBlue;
+    color: $darkBlueTitle;
   }
 
 }
+
 
 //section_intro
 .section_intro {
@@ -63,24 +66,134 @@
 .intro_row {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .intro_text {
-  h1{
+  h1 {
     font-size: 36px;
     font-weight: 600;
-    color:$darkBlue;
+    color: $darkBlueTitle;
     margin-bottom: 24px;
   }
-  h2{
+
+  h2 {
     width: 100%;
     max-width: 518px;
     line-height: 1.4;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 
   }
 }
-.intro_img{
-padding-left: 20px;
+
+.intro_img {
+  padding-left: 20px;
+}
+
+//section_advantages
+.section_advantages {
+  margin: 69px 0 48px 0;
+  padding: 65px 0;
+  background: $lightBlueSection;
+}
+
+.advantages_row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    content: '';
+    width: 128px;
+    height: 94px;
+    background: url("/src/icons/star_advantages.svg") no-repeat;
+    position: absolute;
+    top: -115px;
+    left: -20px;
+    z-index: 50;
+  }
+
+}
+
+.advantages_block {
+  margin-left: 37px;
+  padding-left: 16px;
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      background: url("/src/icons/square_advantages.svg") no-repeat;
+      position: absolute;
+      top: 2px;
+      left: -27px;
+      bottom: 0;
+      z-index: 50;
+    }
+  }
+
+  p {
+    color: $lightGrayText;
+    font-weight: 400;
+
+  }
+
+  &:first-child {
+    margin-left: 0;
+
+  }
+}
+
+//section_services
+.section_services {
+
+}
+
+.services_row {
+
+}
+
+.services_title {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 522px;
+  margin-bottom: 48px;
+
+
+  h2 {
+    font-size: 32px;
+    color: $darkBlueTitle;
+    margin-bottom: 8px;
+
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.services_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
+  img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+  }
+
 }
