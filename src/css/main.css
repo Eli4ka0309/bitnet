@@ -23,6 +23,7 @@
 html, body {
   font-family: "SFProDisplay", sans-serif;
   font-size: 15px;
+  font-weight: 400;
   margin: 0 auto;
   width: 100%;
   color: black;
@@ -222,6 +223,131 @@ ul, li, a {
   width: 100%;
   max-width: 290px;
   height: auto;
+}
+
+.section_portfolio {
+  background: #E1ECFE;
+  margin: 48px 0 48px 0;
+  padding-bottom: 96px;
+}
+
+.portfolio_row {
+  position: relative;
+}
+
+.portfolio_title h2 {
+  color: #052A45;
+  font-size: 36px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+.slick-track li {
+  margin: 0 16px;
+}
+.slick-track li img {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.slides_inner {
+  position: relative;
+}
+.slides_inner .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  font-size: 0;
+  width: 48px;
+  height: 48px;
+}
+.slides_inner .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.slides_inner .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+.slides_inner .slick-dots li.slick-active button {
+  background: #8B8B8B;
+}
+.slides_inner .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: #D9D9D9;
+  border-radius: 50%;
+}
+
+.slide_item {
+  text-align: center;
+}
+
+.slick-arrow.slick-prev {
+  background: url("/src/icons/portfolio/arrow-left.svg") 0 0/100% no-repeat;
+  left: 10%;
+}
+
+.slick-arrow.slick-next {
+  right: 10%;
+  background: url("/src/icons/portfolio/arrow-right.svg") 0 0/100% no-repeat;
+}
+
+.contacts_row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contacts_content {
+  padding-left: 120px;
+}
+.contacts_content h3 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #052A45;
+  margin-bottom: 5px;
+}
+.contacts_content a, .contacts_content p {
+  font-size: 18px;
+}
+.contacts_content a:hover {
+  color: #052A45;
+}
+
+.contacts_social {
+  margin-right: 30px;
+}
+
+.contacts_inner {
+  margin-bottom: 18px;
+}
+.contacts_inner:last-child {
+  margin-bottom: 0;
+}
+
+.section_copywriter {
+  background: #E1ECFE;
+  padding: 23px 0;
+  margin-top: 48px;
+}
+.section_copywriter p {
+  font-size: 18px;
+}
+
+.copywriter {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

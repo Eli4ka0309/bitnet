@@ -91,11 +91,12 @@
   padding-left: 20px;
 }
 
+
 //section_advantages
 .section_advantages {
   margin: 69px 0 48px 0;
   padding: 65px 0;
-  background: $lightBlueSection;
+  background: $lightBlueSectionBg;
 }
 
 .advantages_row {
@@ -151,11 +152,8 @@
   }
 }
 
+
 //section_services
-.section_services {
-
-}
-
 .services_row {
 
 }
@@ -196,4 +194,168 @@
     height: auto;
   }
 
+}
+
+
+//section_portfolio
+.section_portfolio {
+  background: $lightBlueSectionBg;
+  margin: 48px 0 48px 0;
+  padding-bottom: 96px;
+}
+
+.portfolio_row {
+  position: relative;
+
+}
+
+.portfolio_title {
+  h2 {
+    color: $darkBlueTitle;
+    font-size: 36px;
+    text-align: center;
+    padding: 40px 0;
+
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+
+  li {
+
+    margin: 0 16px;
+
+    img {
+      border-radius: 8px;
+      box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.15));
+
+    }
+  }
+}
+
+.slides_inner {
+  position: relative;
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+
+    z-index: 100;
+    font-size: 0;
+    width: 48px;
+    height: 48px;
+
+
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    li {
+      list-style: none;
+      margin: 0 10px;
+
+    }
+
+    li.slick-active {
+      button {
+        background: $bgDotsActive;
+
+      }
+    }
+
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background: $bgDots;
+      border-radius: 50%;
+
+    }
+  }
+
+
+}
+
+.slide_item {
+  text-align: center;
+
+}
+
+.slick-arrow.slick-prev {
+  background: url("/src/icons/portfolio/arrow-left.svg") 0 0 /100% no-repeat;
+  left: 10%;
+
+}
+
+.slick-arrow.slick-next {
+  right: 10%;
+  background: url("/src/icons/portfolio/arrow-right.svg") 0 0 /100% no-repeat;
+}
+
+////section_contacts
+.contacts_row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.contacts_content {
+  padding-left: 120px;
+
+  h3 {
+    font-size: 36px;
+    font-weight: 500;
+    color: $darkBlueTitle;
+    margin-bottom: 5px;
+  }
+
+  a, p {
+    font-size: 18px;
+  }
+
+  a {
+    &:hover {
+      color: $darkBlueTitle;
+    }
+  }
+
+}
+
+.contacts_social {
+  margin-right: 30px;
+}
+
+.contacts_inner {
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//copywriter
+.section_copywriter {
+  background: $lightBlueSectionBg;
+  padding: 23px 0;
+  margin-top: 48px;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.copywriter {
+  text-align: center;
 }
