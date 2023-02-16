@@ -5,11 +5,8 @@ $(document).ready(function () {
         dots: true,
         adaptiveHeight: true,
         touchThreshold: 10,
-        centerMode:true,
-        variableWidth: true
-
-
-
+        variableWidth: true,
+        centerMode: true,
     });
 
 });

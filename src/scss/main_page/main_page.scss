@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 //header//
 .header {
   position: fixed;
@@ -22,8 +29,14 @@
 }
 
 .header_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   padding: 17px 0;
@@ -32,7 +45,12 @@
 .header_nav {
 
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
     li {
@@ -64,7 +82,11 @@
 }
 
 .intro_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
 }
@@ -89,6 +111,11 @@
 
 .intro_img {
   padding-left: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
@@ -100,8 +127,13 @@
 }
 
 .advantages_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+
   position: relative;
   width: 100%;
 
@@ -120,7 +152,9 @@
 
 .advantages_block {
   margin-left: 37px;
-  padding-left: 16px;
+  padding-left: 28px;
+  width: 25%;
+
 
   h3 {
     font-size: 16px;
@@ -154,14 +188,21 @@
 
 
 //section_services
-.services_row {
-
-}
 
 .services_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: normal;
+
+  -ms-flex-direction: column;
+
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   width: 100%;
   max-width: 522px;
@@ -182,16 +223,23 @@
 }
 
 .services_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 20px;
 
   img {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 290px;
+    width: 23% !important;
+
     height: auto;
+    border-radius: 8px;
   }
 
 }
@@ -201,7 +249,8 @@
 .section_portfolio {
   background: $lightBlueSectionBg;
   margin: 48px 0 48px 0;
-  padding-bottom: 96px;
+  padding: 40px 0;
+
 }
 
 .portfolio_row {
@@ -214,38 +263,18 @@
     color: $darkBlueTitle;
     font-size: 36px;
     text-align: center;
-    padding: 40px 0;
+    padding-bottom: 40px;
 
   }
 }
 
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-  align-items: flex-start;
-
-  li {
-
-    margin: 0 16px;
-
-    img {
-      border-radius: 8px;
-      box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.15));
-
-    }
-  }
-}
-
+//portfolio_carousel
 .slides_inner {
   position: relative;
 
   .slick-arrow {
     position: absolute;
-    top: 50%;
-
+    top: 38%;
     z-index: 100;
     font-size: 0;
     width: 48px;
@@ -255,8 +284,14 @@
   }
 
   .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 20px;
 
@@ -275,8 +310,8 @@
 
     button {
       font-size: 0;
-      width: 10px;
-      height: 10px;
+      width: 16px;
+      height: 16px;
       background: $bgDots;
       border-radius: 50%;
 
@@ -288,23 +323,57 @@
 
 .slide_item {
   text-align: center;
+  opacity: 0.8;
 
 }
 
+.slick-center {
+  opacity: 1;
+}
+
 .slick-arrow.slick-prev {
-  background: url("/src/icons/portfolio/arrow-left.svg") 0 0 /100% no-repeat;
+  background: url("/src/icons/portfolio/arrow-left.svg") 0 0 /100% no-repeat ;
   left: 10%;
 
 }
 
 .slick-arrow.slick-next {
   right: 10%;
-  background: url("/src/icons/portfolio/arrow-right.svg") 0 0 /100% no-repeat;
+  background: url("/src/icons/portfolio/arrow-right.svg") 0 0 /100% no-repeat ;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  li {
+
+    margin: 0 16px;
+
+    img {
+      border-radius: 8px;
+      -webkit-box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.15));
+      box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.15));
+
+    }
+  }
 }
 
 ////section_contacts
 .contacts_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 
@@ -337,7 +406,7 @@
 }
 
 .contacts_inner {
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 
   &:last-child {
     margin-bottom: 0;
@@ -358,4 +427,54 @@
 
 .copywriter {
   text-align: center;
+}
+
+
+@media (max-width: 1025px) {
+  //  Header
+  .header_nav {
+    ul {
+      li {
+        margin-left: 53px;
+        font-size: 15px;
+      }
+    }
+
+  }
+  //  intro
+  .intro_text {
+    h1 {
+      font-size: 34px;
+    }
+  }
+
+  // advantages
+  .advantages_row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .advantages_block {
+    margin-bottom: 37px;
+    margin-left: 0;
+    width: 48%;
+  }
+
+  //  service,portfolio
+  .services_title, .portfolio_title {
+    h2 {
+      font-size: 30px;
+    }
+
+  }
+
+  //  footer
+  .contacts_content {
+    padding-left: 80px;
+
+    h3 {
+
+      font-size: 32px;
+    }
+  }
+
 }
