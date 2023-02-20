@@ -9,4 +9,8 @@ $(document).ready(function () {
         centerMode: true,
     });
 
+    $('.header__burger-btm').click(function (event){
+        $('.header__burger-btm,.header_nav').toggleClass("active");
+    });
+
 });
