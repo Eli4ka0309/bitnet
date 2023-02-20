@@ -7,6 +7,15 @@ $(document).ready(function () {
         touchThreshold: 10,
         variableWidth: true,
         centerMode: true,
+        mobileFirst: true,
+        responsive:[{
+            breakpoints:570,
+            settings: {
+
+            }
+        }
+
+        ]
     });
 
     $('.header__burger-btm').click(function (event){
